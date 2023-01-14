@@ -1,5 +1,5 @@
 import { Contact } from '../ContactItem/ContactItem';
-import { Notification } from '../Notification/Notification';
+// import { Notification } from '../Notification/Notification';
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/contactsSlice';
 import { getFilter } from 'redux/filterSlice';
