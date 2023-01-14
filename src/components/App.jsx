@@ -15,7 +15,6 @@ export const App = () => {
           <Subtitle>Contacts</Subtitle>
           <Filter />
           <ContactList />
-          {/* {filteredContacts.length < 1 && <Notification />} */}
         </Box>
         <Box>
           <Subtitle>Add contact</Subtitle>
