@@ -3,6 +3,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { Box } from './Box';
+import { Toaster } from 'react-hot-toast';
 import { Title, Subtitle } from './App.styled';
 
 export const App = () => {
@@ -21,6 +22,7 @@ export const App = () => {
           <ContactForm />
         </Box>
       </Box>
+      <Toaster />
       <GlobalStyle />
     </Box>
   );

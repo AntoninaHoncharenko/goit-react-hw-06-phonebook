@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/contactsSlice';
+import toast from 'react-hot-toast';
 import { Box } from '../Box';
 import { ContactLabel, ContactInput, AddBtn } from './ContactForm.styled';
 
@@ -15,7 +16,10 @@ export const ContactForm = () => {
     const addedNumber = form.elements.number.value;
 
     if (contacts.find(contact => contact.name === addedName)) {
-      window.alert(`${addedName} is already in contacts`);
+      toast.error(`${addedName} is already in contacts`, {
+        duration: 3000,
+        position: 'top-center',
+      });
     } else {
       dispatch(addContact(addedName, addedNumber));
     }
